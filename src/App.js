@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Accueil from "./page/Accueil";
+import Administrateur from "./page/Administrateur";
+import Login from "./page/Login";
+import Navbar from "./composants/Navbar";
+import { SnackbarProvider, enqueueSnackbar } from "notistack";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SnackbarProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Accueil />}>
+            Accueil
+          </Route>
+          <Route path="/Administrateur" element={<Administrateur />}>
+            Administrateur
+          </Route>
+          <Route path="/Login" element={<Login />}>
+            Login
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </SnackbarProvider>
   );
 }
-
-export default App;
