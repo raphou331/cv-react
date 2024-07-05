@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 export default function Competence() {
     const [competences, setCompetences] = useState([])
     async function fetchCompetence() {
-        const response = await fetch('http://localhost:3333/competence')
+        const response = await fetch('https://cv-api-1.onrender.com/competence')
         const data = await response.json()
         setCompetences(data)
     }

@@ -4,7 +4,7 @@ import { TfiSave } from "react-icons/tfi";
 import { ImCancelCircle } from "react-icons/im";
 import { enqueueSnackbar } from 'notistack';
 
-const url = "http://localhost:3333"
+const url = "https://cv-api-1.onrender.com"
 
 export default function AdminLoisirs() {
     const [loisirs, setLoisirs] = useState([])
@@ -12,7 +12,7 @@ export default function AdminLoisirs() {
     const [isAdd, setIsAdd] = useState(false)
     async function fetchLoisirs() {
 
-        const response = await fetch('http://localhost:3333/loisirs')
+        const response = await fetch('https://cv-api-1.onrender.com/loisirs')
         const data = await response.json()
         setLoisirs(data)
     }
@@ -23,7 +23,7 @@ export default function AdminLoisirs() {
 
     async function handleDelete(id) {
         console.log(id);
-        const response = await fetch(`http://localhost:3333/loisirs/${id}`, {
+        const response = await fetch(`https://cv-api-1.onrender.com/loisirs/${id}`, {
             method: 'DELETE'
         });
 

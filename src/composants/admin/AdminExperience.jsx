@@ -4,7 +4,7 @@ import { AiTwotoneDelete } from "react-icons/ai";
 import { TfiSave } from "react-icons/tfi";
 import { ImCancelCircle } from "react-icons/im";
 
-const url = "http://localhost:3333"
+const url = "https://cv-api-1.onrender.com:3333"
 
 export default function AdminExperience() {
     const [experience, setExperience] = useState([])
@@ -15,7 +15,7 @@ export default function AdminExperience() {
     const [isAdd, setIsAdd] = useState(false)
     async function fetchExperience() {
 
-        const response = await fetch('http://localhost:3333/experience')
+        const response = await fetch('https://cv-api-1.onrender.com/experience')
         const data = await response.json()
         setExperience(data)
     }
@@ -26,7 +26,7 @@ export default function AdminExperience() {
 
     async function handleDelete(id) {
         console.log(id);
-        const response = await fetch(`http://localhost:3333/experience/${id}`, {
+        const response = await fetch(`https://cv-api-1.onrender.com/experience/${id}`, {
             method: 'DELETE'
         });
 

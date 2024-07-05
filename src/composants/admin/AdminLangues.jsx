@@ -4,7 +4,7 @@ import { TfiSave } from "react-icons/tfi";
 import { ImCancelCircle } from "react-icons/im";
 import { enqueueSnackbar } from 'notistack';
 
-const url = "http://localhost:3333"
+const url = "https://cv-api-1.onrender.com"
 
 export default function AdminLangues() {
     const [langues, setLangues] = useState([])
@@ -14,7 +14,7 @@ export default function AdminLangues() {
     const [isAdd, setIsAdd] = useState(false)
     async function fetchLangues() {
 
-        const response = await fetch('http://localhost:3333/langues')
+        const response = await fetch('https://cv-api-1.onrender.com/langues')
         const data = await response.json()
         setLangues(data)
     }
@@ -23,7 +23,7 @@ export default function AdminLangues() {
     }, [])
     async function handleDelete(id) {
         console.log(id);
-        const response = await fetch(`http://localhost:3333/langues/${id}`, {
+        const response = await fetch(`https://cv-api-1.onrender.com/langues/${id}`, {
             method: 'DELETE'
         });
         if (response.ok) {

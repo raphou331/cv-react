@@ -38,7 +38,6 @@ export default function Administrateur() {
     return (
         <div className='flex gap-5'>
             <div className='flex flex-col gap-6 w-[50%] bg-slate-100'>
-                {/*  <h1 className='text-4xl font-semibold'>Contact</h1> */}
                 <AdminContact />
                 <AdminCompetence />
 

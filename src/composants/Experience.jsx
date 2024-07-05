@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const url = "http://localhost:3333";
+const url = "https://cv-api-1.onrender.com";
 
 export default function Experience() {
     const [experience, setExperience] = useState([]);

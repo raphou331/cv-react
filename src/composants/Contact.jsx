@@ -7,7 +7,7 @@ export default function Contact() {
     const [contact, setContact] = useState([])
     /*  fonction asyncronne pour recuperer les contact */
     async function getContact() {
-        const reponse = await fetch('http://localhost:3333/contact')
+        const reponse = await fetch('https://cv-api-1.onrender.com/contact')
         const data = await reponse.json()
         /*  je recupere le premier et le seul element dans mon tableau data avec l index 0 */
         setContact(data)

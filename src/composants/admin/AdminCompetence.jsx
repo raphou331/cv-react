@@ -4,7 +4,7 @@ import { TfiSave } from "react-icons/tfi";
 import { ImCancelCircle } from "react-icons/im";
 import { enqueueSnackbar } from 'notistack';
 
-const url = "http://localhost:3333"
+const url = "https://cv-api-1.onrender.com"
 
 export default function AdminCompetence() {
     const [competences, setCompetences] = useState([])
@@ -12,7 +12,7 @@ export default function AdminCompetence() {
     const [isAdd, setIsAdd] = useState(false)
     async function fetchCompetence() {
 
-        const response = await fetch('http://localhost:3333/competence')
+        const response = await fetch('https://cv-api-1.onrender.com/competence')
         const data = await response.json()
         setCompetences(data)
     }
@@ -23,7 +23,7 @@ export default function AdminCompetence() {
 
     async function handleDelete(id) {
         console.log(id);
-        const response = await fetch(`http://localhost:3333/competence/${id}`, {
+        const response = await fetch(`https://cv-api-1.onrender.com/competence/${id}`, {
             method: 'DELETE'
         });
 

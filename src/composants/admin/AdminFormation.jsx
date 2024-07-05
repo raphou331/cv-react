@@ -4,7 +4,7 @@ import { AiTwotoneDelete } from "react-icons/ai";
 import { TfiSave } from "react-icons/tfi";
 import { ImCancelCircle } from "react-icons/im";
 
-const url = "http://localhost:3333"
+const url = "https://cv-api-1.onrender.com"
 
 export default function AdminFormation() {
     const [formation, setFormation] = useState([])
@@ -15,7 +15,7 @@ export default function AdminFormation() {
     const [isAdd, setIsAdd] = useState(false)
     async function fetchFormation() {
 
-        const response = await fetch('http://localhost:3333/formation')
+        const response = await fetch('https://cv-api-1.onrender.com/formation')
         const data = await response.json()
         setFormation(data)
     }
@@ -26,7 +26,7 @@ export default function AdminFormation() {
 
     async function handleDelete(id) {
         console.log(id);
-        const response = await fetch(`http://localhost:3333/formation/${id}`, {
+        const response = await fetch(`https://cv-api-1.onrender.com/formation/${id}`, {
             method: 'DELETE'
         });
 
