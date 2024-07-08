@@ -6,6 +6,7 @@ import { ImCancelCircle } from "react-icons/im";
 
 const url = "https://cv-api-1.onrender.com"
 
+
 export default function AdminFormation() {
     const [formation, setFormation] = useState([])
     const [skill, setSkill] = useState('')
@@ -16,6 +17,7 @@ export default function AdminFormation() {
     async function fetchFormation() {
 
         const response = await fetch('https://cv-api-1.onrender.com/formation')
+
         const data = await response.json()
         setFormation(data)
     }
@@ -26,9 +28,10 @@ export default function AdminFormation() {
 
     async function handleDelete(id) {
         console.log(id);
-        const response = await fetch(`https://cv-api-1.onrender.com/formation/${id}`, {
-            method: 'DELETE'
-        });
+        const response = await fetch(`https://cv-api-1.onrender.com/formation/${id}`
+            , {
+                method: 'DELETE'
+            });
 
         if (response.ok) {
             const data = await response.json()

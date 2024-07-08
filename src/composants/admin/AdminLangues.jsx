@@ -6,6 +6,7 @@ import { enqueueSnackbar } from 'notistack';
 
 const url = "https://cv-api-1.onrender.com"
 
+
 export default function AdminLangues() {
     const [langues, setLangues] = useState([])
     const [name, setName] = useState('')
@@ -15,6 +16,7 @@ export default function AdminLangues() {
     async function fetchLangues() {
 
         const response = await fetch('https://cv-api-1.onrender.com/langues')
+
         const data = await response.json()
         setLangues(data)
     }
@@ -23,9 +25,10 @@ export default function AdminLangues() {
     }, [])
     async function handleDelete(id) {
         console.log(id);
-        const response = await fetch(`https://cv-api-1.onrender.com/langues/${id}`, {
-            method: 'DELETE'
-        });
+        const response = await fetch(`https://cv-api-1.onrender.com/langues/${id}`
+            , {
+                method: 'DELETE'
+            });
         if (response.ok) {
             const data = await response.json()
             enqueueSnackbar("une langue a ete supprimée", {

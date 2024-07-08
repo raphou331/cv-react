@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 const url = "https://cv-api-1.onrender.com";
 
+
 export default function Langues() {
     const [langues, setLangues] = useState([]);
     async function fetchLangues() {

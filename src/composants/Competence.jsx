@@ -4,6 +4,7 @@ export default function Competence() {
     const [competences, setCompetences] = useState([])
     async function fetchCompetence() {
         const response = await fetch('https://cv-api-1.onrender.com/competence')
+
         const data = await response.json()
         setCompetences(data)
     }
@@ -13,7 +14,7 @@ export default function Competence() {
         fetchCompetence()
     }, [])
     return (
-        <div className=' mt-4 ml-2'>
+        <div className=' /* mt-4 ml-2  */  p-4'>
             <h2 className='text-3xl mt-3 text-center p-2 bg-red-300 rounded-3xl'>COMPETENCES</h2>
 
             {competences.map(item =>

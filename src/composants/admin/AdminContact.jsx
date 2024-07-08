@@ -11,8 +11,9 @@ export default function AdminContact() {
     const [prenom, setPrenom] = useState('')
 
     async function fetchContact() {
-        const reponse = await fetch('https://cv-api-1.onrender.com/contact')
-        const data = await reponse.json()
+        const response = await fetch('https://cv-api-1.onrender.com/contact')
+
+        const data = await response.json()
         console.log(data);
         setTel(data[0].tel)
         setEmail(data[0].email)
@@ -27,14 +28,15 @@ export default function AdminContact() {
     function handleSubmit(event) {
         event.preventDefault()
         console.log(tel, email, adresse)
-        fetch('https://cv-api-1.onrender.com/contact', {
-            method: 'POST',
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify({ nom, prenom, tel, email, adresse })
+        fetch('https://cv-api-1.onrender.com/contact'
+            , {
+                method: 'POST',
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify({ nom, prenom, tel, email, adresse })
 
-        })
+            })
             .then(reponse => reponse.json())
             .then(data => console.log(data))
     }

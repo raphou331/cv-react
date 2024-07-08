@@ -6,6 +6,7 @@ import { enqueueSnackbar } from 'notistack';
 
 const url = "https://cv-api-1.onrender.com"
 
+
 export default function AdminCompetence() {
     const [competences, setCompetences] = useState([])
     const [skill, setSkill] = useState('')

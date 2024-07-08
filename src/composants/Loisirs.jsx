@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 const url = "https://cv-api-1.onrender.com"
 
+
 export default function Loisirs() {
     const [loisirs, setLoisirs] = useState([])
     async function fetchLoisirs() {

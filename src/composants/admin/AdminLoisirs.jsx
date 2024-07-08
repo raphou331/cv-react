@@ -6,6 +6,7 @@ import { enqueueSnackbar } from 'notistack';
 
 const url = "https://cv-api-1.onrender.com"
 
+
 export default function AdminLoisirs() {
     const [loisirs, setLoisirs] = useState([])
     const [skill, setSkill] = useState('')
@@ -13,6 +14,8 @@ export default function AdminLoisirs() {
     async function fetchLoisirs() {
 
         const response = await fetch('https://cv-api-1.onrender.com/loisirs')
+
+
         const data = await response.json()
         setLoisirs(data)
     }
@@ -23,9 +26,11 @@ export default function AdminLoisirs() {
 
     async function handleDelete(id) {
         console.log(id);
-        const response = await fetch(`https://cv-api-1.onrender.com/loisirs/${id}`, {
-            method: 'DELETE'
-        });
+        const response = await fetch(`https://cv-api-1.onrender.com/loisirs/${id}`
+
+            , {
+                method: 'DELETE'
+            });
 
         if (response.ok) {
             const data = await response.json()
