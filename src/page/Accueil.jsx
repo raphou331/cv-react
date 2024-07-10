@@ -8,14 +8,14 @@ import Experience from '../composants/Experience'
 
 export default function Accueil() {
     return (
-        <div className='flex gap-5 bg-violet-100 flex-wrap'>
-            <div className='flex flex-col gap-6 ml-10 w-[40%]'>
+        <div className='flex gap-3 bg-violet-100 flex-wrap '>
+            <div className='flex flex-col p-6 gap-6 w-[40%] max-md:w-full '>
                 <Contact />
                 <Competence />
 
 
             </div>
-            <div className='flex flex-col gap-6 ml-10 w-[50%] mt-40'>
+            <div className='flex flex-col gap-6 w-[55%] max-md:w-full'>
                 <Langues />
                 <Formation />
                 <Experience />

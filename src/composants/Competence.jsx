@@ -14,8 +14,8 @@ export default function Competence() {
         fetchCompetence()
     }, [])
     return (
-        <div className=' /* mt-4 ml-2  */  p-4'>
-            <h2 className='text-3xl mt-3 text-center p-2 bg-red-300 rounded-3xl'>COMPETENCES</h2>
+        <div className='ml-2'>
+            <h2 className='text-3xl mt-3 text-center md:p-2 p-1 bg-red-300 rounded-3xl mb-4 '>COMPETENCES</h2>
 
             {competences.map(item =>
                 <div className='flex justify-between items-center'>
@@ -23,6 +23,7 @@ export default function Competence() {
                     <img src={item.img} ></img>
                 </div>
             )}
+
         </div>
     )
 }

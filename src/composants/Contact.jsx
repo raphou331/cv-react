@@ -23,7 +23,7 @@ export default function Contact() {
             {contact.length > 0 &&
                 <div className=' ml-2'>
                     <Profile nom={contact[0].nom} prenom={contact[0].prenom} />
-                    <h2 className=' text-3xl mt-3 mb-4 text-center p-2 bg-red-300 rounded-3xl '> CONTACT</h2>
+                    <h2 className=' text-3xl mt-3 mb-4 text-center p-2 bg-red-300 rounded-3xl  flex flex-col items-center'> CONTACT</h2>
                     <table className='ml-6 mt-6'>
                         <tr>
                             <th>Tel</th>

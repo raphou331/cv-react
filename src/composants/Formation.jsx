@@ -16,7 +16,7 @@ export default function Formation() {
     }, []);
     return (
         <div>
-            <h2 className="text-3xl mt-3 text-center p-2 bg-red-300 rounded-3xl mb-4">
+            <h2 className="text-3xl mt-3 md:text-center p-2 bg-red-300 rounded-3xl mb-4 text-center items-center">
                 FORMATION
             </h2>
             <table className=" w-full ">
